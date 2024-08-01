@@ -1,0 +1,1082 @@
+
+/* Para navegadores webkit */
+
+  html {
+    max-width: 100%;
+  overflow-x: hidden;
+  }
+
+body{
+    
+    font-family:serif;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+  overflow-x: hidden;
+    
+}
+
+
+
+/* Estilo de la barra de navegación */
+.navbar {
+    background: transparent; /* Fondo completamente transparente */
+    transition: background-color 0.3s;
+    max-height: 90px;
+    position: absolute;display: flex;
+    justify-content: flex-end;
+    
+    
+}
+
+.superpuesto {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: transparent; /* Estilo inicial sin fondo */
+    z-index: 1000;
+    opacity: 1;
+    height: 90px;
+    transition: background 0.5s ease, opacity 0.5s ease; /* Ajusta la duración de la transición según tus necesidades */
+  }
+  .scrolled {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    opacity: 1; /* Asegura que la opacidad esté al 100% cuando se aplica la clase "scrolled" */
+    height: 90px; /* Cambia la altura al hacer scroll */
+    
+  }
+/* Estilo para el contenedor del logo y los ítems de navegación */
+.navbar-collapse {
+    display: flex;
+    justify-content: space-between; /* Coloca el logo a la izquierda y el botón a la derecha */
+    align-items: center; /* Centra verticalmente los elementos */
+    
+}
+
+.collapseProduct {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/* Estilo para el logo */
+.navbar-brand {
+    color: #b1a6a6; /* Cambia el color del texto a blanco */
+    margin-right: 15px;
+    margin-left: 0; /* Ajusta el margen izquierdo del logo a "0" para separarlo del menú */
+}
+/* Estilo para los ítems de la barra de navegación */
+.navbar-nav {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los elementos de navegación */
+    flex-grow: 1; /* Hace que los elementos ocupen todo el espacio disponible */
+    align-items: center; /* Centra verticalmente los elementos */
+    
+   
+}
+ 
+
+.nav-item {
+    margin: 0 15px; /* Espacio entre los elementos de navegación */
+    
+  
+    
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff; /* Cambia el color del texto a blanco */
+    text-align: center; /* Centra el texto horizontalmente */
+    font-size: 18px; /* Tamaño del texto */
+    font-family: "Renogare", Sans-serif; /* Fuente */
+ 
+}
+
+.nav-link-bottom {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 18px;
+    border: 2px solid #ffffff;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+    transform: scale(1);
+    margin-right: 20px;
+    display: inline-block;
+   
+    
+    
+}
+
+.bottomNav {
+    position: absolute;
+    right: 0;
+}
+
+.nav-link-bottom:hover{
+    
+    color: white;
+    transform: scale(1.1);
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.navbar-brand-img {
+    max-width: 100px;
+    margin-left: 0px;
+    margin-right: 0px;
+    position: relative;
+    bottom: 13px;
+    
+}
+
+.navbar-dark .navbar-toggler {
+    position: relative;
+    
+}
+
+
+/* Estilo para el contenedor principal (hero) */
+.word-split {
+    height: 80px;
+    
+}
+.contenedorDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+
+}
+.nav-link-bottomP {
+    padding: 10px 20px;
+    background-color: #2b7d7d;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 18px;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+    transform: scale(1);
+    display: inline-block;
+}
+.nav-link-bottomP:hover {
+    
+    
+    transform: scale(1.1);
+    
+    text-decoration: none;
+}
+.hero {
+    background-image: url(img/imagen1.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Centro el contenido horizontalmente */
+    align-items: center;
+    text-align: left; /* Alinea el texto a la izquierda */
+    color: white;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    /* Color de texto */
+}
+/* Estilo para el contenido dentro del contenedor */
+.content {
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente para mejorar la legibilidad del texto */
+    width: 400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea el contenido hacia el lado izquierdo */
+    justify-content: center;
+    text-align: left; /* Alinea el texto a la izquierda */
+    padding-left: 20px; /* Agrega un espacio a la izquierda para mover el contenido hacia el lado izquierdo */
+   
+    
+}
+.content-height {
+    max-width: 50vw;
+    max-height: auto !important;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #FFFFFF;
+    text-align: center;
+    margin: 15px;
+    font-family: 'Montserrat', sans-serif;
+    
+    font-size: 22px;
+   
+}
+
+.content-height a:hover {
+    text-decoration: none;
+}
+
+
+/* Estilo para las imágenes de fondo (se superpondrán en el carrusel) */
+.background-image {
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    z-index: -1;
+    max-width: 100%;
+    
+}
+
+img {
+    max-width: 100%;  
+    height: auto;
+}
+
+
+.mapa {
+    background-color: #606C43;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  
+   padding-bottom: 50px;
+   padding-top: 50px;
+}
+
+/* Estilo para el título H1 */
+.content h1 {
+    color: #FFFFFF; /* Color del texto */
+    font-size: 78px; /* Tamaño del texto en pantallas grandes*/
+    font-family: 'Montserrat', 'Raleway', sans-serif; /* Familia de fuentes */
+    font-weight: 300; /* Peso de la fuente */
+    line-height: 0.8; /* Altura de línea */
+    letter-spacing: -8px; /* Espaciado entre letras */
+}
+
+
+/* Estilo para el párrafo */
+.content p {
+    color: #FFFFFF; /* Color del texto */
+    font-size: 22px; /* Tamaño de fuente del párrafo */
+    line-height: 1;
+    margin-bottom: 5px;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+
+/* Estilo para el botón de acción ovalado */
+.btn-accion {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: transparent; /* Fondo transparente */
+    color: #ffffff; /* Color del texto del botón (azul oscuro) */
+    text-decoration: none;
+    border-radius: 50px; /* Hace que el botón sea ovalado */
+    font-size: 18px;
+    border: 2px solid #ffffff; /* Borde de 2px sólido en azul oscuro */
+    transition: transform 0.3s ease, font-size 0.3s ease; /* Transición suave para transformación y tamaño de fuente */
+    transform: scale(1); /* Tamaño inicial del botón (100%) */
+}
+/* Estilo para el botón al hacer hover */
+.btn-accion:hover {
+    
+    color: white; /* Cambia el color del texto a blanco */
+    transform: scale(1.1); /* Aumenta el tamaño del botón al hacer hover al 110% del tamaño original */
+    font-size: 18px; /* Tamaño de fuente del botón al hacer hover (mismo tamaño inicial) */
+    text-decoration: none;
+
+}
+/*Estilo para las secciones*/
+
+.product-section {
+    display: flex;
+    flex-direction: row; /* Cambiar a "column" para texto debajo de la imagen */
+    align-items: center; /* Alinea verticalmente los elementos */
+    margin: 0; /* Espacio entre secciones */
+    padding: 50px; /* Espacio interno de la sección */
+    background: #a5a3a328;
+}
+
+.product-text {
+    flex: 1; /* Permite que el texto ocupe el espacio restante */
+    padding: 10px; /* Espacio interno del texto */
+    text-align: left; /* Alinea el texto a la izquierda o según lo desees */
+    line-height: 1.5;
+}
+
+.product-image img {
+    max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
+    height: auto;
+    
+}
+
+.content-main {
+    background:#e4f1e3;
+color: #706b6b;}
+
+
+.styleH2 {
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-size: 51px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+
+.styleP {
+    color: #4f5052;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 0;
+    
+    
+}
+ 
+
+ /*Estilo para la seccion 2*/
+
+.product-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 productos por fila en la vista de escritorio */
+    gap: 20px; /* Espacio entre los productos */
+    background-color: #666666;
+    justify-items: center; /* Centra las tarjetas en el contenedor */
+    padding: 50px;
+    
+}
+
+
+
+/* Estilos para las tarjetas de nuestro productos */
+.product-card {
+    text-align: center;
+    width: 90%; /* Reducir el ancho de las tarjetas al 90% del ancho original */
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Espacio adicional entre las tarjetas de productos */
+    max-height: 40rem; /* Establece una altura máxima igual a la del contenedor */
+    color: #fff;
+    
+}
+
+
+.product-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    font-family: "Montserrat", Sans-serif;
+    color: #ffffff;
+
+   
+}
+
+.product-card p {
+    color: #ffffff;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 14px;
+    
+   
+}
+.product-card .image-container {
+    flex: 1; /* Ocupa el espacio restante en la tarjeta */
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 0px; /* Cambia el valor según lo desees */
+    margin-bottom: 5px;
+    
+}
+
+.product-card .image-container img {
+    flex: 1; /* Ocupa el espacio restante en la tarjeta */
+    
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 0px; /* Cambia el valor según lo desees */
+    margin-bottom: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s; /* Agrega una transición para una animación suave */
+    transform-origin: center center; /* Establece el punto de origen en el centro de la imagen */
+    transform: translate(0, 0) scale(1.1); /* Aplica un zoom inicial (puedes ajustar el valor) */
+}
+
+
+
+.product-card .image-container img:hover {
+    transform: translate(0, 0) scale(1); /* Al pasar el mouse por encima, la imagen se muestra completa sin cambio de tamaño */
+}
+
+/* Icono de WhatsApp */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 30px; /* Ajusta la distancia desde la parte inferior según tus preferencias */
+    right: 30px; /* Ajusta la distancia desde la derecha según tus preferencias */
+    z-index: 999; /* Asegura que esté en la parte superior de otros elementos */
+}
+
+.whatsapp-icon img {
+    width: 50px; /* Ajusta el tamaño del ícono según tus preferencias */
+    transition: width 0.4s ease; /* Agrega una transición suave */
+}
+
+.whatsapp-icon img:hover {
+    width: 70px;
+}
+
+.whatsapp-icon img:not(:hover) {
+    width: 50px;
+    transition: width 0.4s ease; /* Agrega una transición suave para el regreso al estado original */
+}
+
+
+
+
+
+
+
+
+
+/* Agrega estos estilos al final de tu archivo CSS */
+#navbarOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none; /* Evita que se hagan click en el fondo */
+    transition: opacity 0.3s;
+}
+
+
+
+#navbarNav.show {
+    width: 0; /* Ancho inicial cero para ocultarlo */
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    width: 100%; /* Ancho del menú desplegable al 100% de la ventana del navegador */
+    transform: translateX(0); /* Lo desplaza desde la derecha */
+    overflow-y: auto; /* Agrega desplazamiento vertical si es necesario */
+}
+
+.navbar-brand, .navbar-toggler {
+    z-index: 10001; /* Asegura que el logo y el botón estén en la parte superior */
+}
+
+.navbar-toggler {
+    position: relative; /* Ajusta la posición del botón */
+}
+#navbarNav.show + #navbarOverlay.show-overlay {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+}
+#navbarNav.show .navbar-nav .nav-link {
+    color: #ffffff; /* Cambia el color del texto a rojo cuando se despliega el menú */
+    font-size: 25px; /* Cambia el tamaño del texto a 20px cuando se despliega el menú */
+    font-family: 'Tu-Fuente-Preferida', sans-serif; /* Cambia la fuente del texto */
+    
+    
+}
+
+/************************************MAIN-CORTINAS-VERTICALES***********************************************/
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+    
+}
+
+
+.thumbnail-images {
+    display: flex;
+    flex-direction: column; /* Organiza las miniaturas en una columna */
+    
+}
+
+.thumbnail-images img {
+    width: 30vw; /* Tamaño fijo para las miniaturas */
+    height: 120px; /* Ajusta la altura igual al ancho para mantener la relación de aspecto */
+    margin-bottom: 10px; /* Espacio entre las miniaturas */
+    cursor: pointer;
+    ;
+}
+
+
+.card-details {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
+    margin: 25px;
+    
+   
+
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
+
+}
+.contentCard {
+    flex: 1;
+    padding: 20px;
+    margin-left: 20px;
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
+
+}
+
+.titulo1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.parrafo1 {
+    font-size: 18px;
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    
+}
+
+.button1 {
+    background-color: #ffffff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.card-image img {
+    max-width: 100%;
+    max-height: 100vh; /* Ajusta la altura máxima según tus necesidades */
+    cursor: pointer;
+    
+    
+    
+}
+
+.card-imageProduct {
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.flecha-container {
+    
+    top: -50px;
+    right: 10px;
+    
+  }
+  
+  .flecha {
+    
+    font-size: 40px; /* Tamaño más grande */
+    text-decoration: none;
+    color: white; /* Color blanco */
+    cursor: pointer;
+    padding: 20px; /* Espaciado interior para hacerla más grande */
+    
+
+   
+  }
+
+  .flecha:hover {
+    text-decoration: none;
+    color: #000000;
+    /* Color blanco (puedes ajustar el color si es necesario) */
+  }
+  
+ 
+ /******testimonio de clientes******/
+.tituloParrafo {
+    margin-top: 25px;
+    
+}
+.tituloTestimonio {
+   margin: 0;
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 30px;
+    text-align: center;
+
+}
+
+.tituloParrafo p {
+    text-align: center;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 18px;
+    color: #d1cfcf;
+    
+
+}
+
+ .carrusel {
+    overflow: hidden;
+    position: relative;
+}
+
+.contenedor {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 100px;
+    margin-top: 25px;
+}
+
+.imagen {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 5px;
+    text-align: center;
+    flex: 0 0 auto;
+    width: calc(100% / 4); /* Inicialmente muestra 5 imágenes por fila */
+    overflow: hidden; /* Añade esta propiedad para evitar que las imágenes se desborden al agrandarse */
+}
+
+.imagen img {
+    width: 100%;
+    height: 200px; /* Ajusta esta altura según tus necesidades */
+    object-fit: cover; /* Esto recortará las imágenes si no tienen la misma relación de aspecto */
+    cursor: pointer;
+    transition: transform 1s ease; /* Transición en el estado normal y hover */
+}
+
+.imagen:hover img {
+    transform: scale(1.2); /* Ajusta el valor según lo que desees para el agrandamiento */
+}
+
+.imagen img:not(:hover) {
+    transform: scale(1); /* Volver al estado original cuando no está en hover */
+    transition: transform 1s ease; /* Hacer la transición de vuelta más lenta */
+}
+
+.buttonTest {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background: transparent; /* Fondo transparente */
+  border: none; /* Sin borde */
+  cursor: pointer;
+  font-size: 24px; /* Ajusta el tamaño del icono según tus preferencias */
+  color: #ffffff; /* Cambia el color del icono según tus preferencias */
+  padding: 0; /* Sin relleno */
+}
+
+.buttonTest:focus {
+    outline: none;
+}
+
+#anterior {
+    left: 0;
+    padding-left: 15px;
+}
+
+#siguiente {
+    right: 0;
+    padding-right: 15px;
+}
+
+
+
+/*footer*/
+
+.fa-instagram:before {
+    padding: -1px;
+}
+
+.footer {
+    height: 150px;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+}
+.social{
+    padding: 10px;
+}
+.social a {
+    padding: 0.7em 0.5em 0.6em;
+    border-radius: 100px;
+    background-color: #f5f5f5;
+    margin: 0.5em;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    display: inline;
+    
+    
+    
+}
+
+.direccion{
+    margin-bottom: 0.5rem;
+}
+
+
+
+/*prueba carrusel imagen prense americano*/
+
+#carouselExampleFade {
+    height: 100%; /* Ajusta la altura del carrusel al 100% del contenedor */
+}
+
+.carousel-inner {
+    height: 100%; /* Ajusta la altura del carrusel al 100% del contenedor */
+}
+
+.carousel-item {
+    height: 100%; /* Ajusta la altura de los elementos del carrusel al 100% del contenedor */
+}
+
+.bd-placeholder-img {
+    object-fit: cover; /* Ajusta la imagen para cubrir completamente el contenedor */
+    width: 100%;
+    height: 400px;
+    display: inline;
+    align-items: center;
+}
+
+.tituloProductos {
+    display: flex;
+    text-align: center;
+    margin: 15px;
+    font-size: 26px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #2b7d7d;
+    font-weight: bold;
+   
+    
+}
+
+.parrafoProductos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-family: "Montserrat", Sans-serif;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 50px;
+    color: #818181;
+}
+.line-container {
+    width: 95%; /* Ajusta el ancho del contenedor de la línea según tus preferencias */
+    margin: 20px auto; /* Ajusta el espacio alrededor del contenedor y lo centra horizontalmente */
+}
+hr {
+    border: 1px solid #818181; /* Establece el color y grosor de la línea */
+    width: 100%; /* Ajusta el ancho de la línea al 100% del contenedor */
+}
+
+
+
+
+/*Politicas de Privacidad*/
+
+
+.contentCenter{
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+    margin-top: 100px;
+    padding: 0.75rem 1.5rem 1.5rem;
+    text-align: start;
+    
+}
+
+.actualizacion {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.tituloPrincipalPolitica {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+
+.subTtitulo {
+font-size: 24px;
+font-weight: 500;
+text-decoration: underline;
+}
+.subTtituloDosPuntos {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.parrafosExpPolitica {
+font-size: 16px;
+color: #88898C;
+}
+
+
+.parrafoFin {
+    font-size: 16px;
+    color: #818181;
+    font-weight: 500;
+}
+
+.fa-facebook:before {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*Media query*/
+
+
+ @media (min-width: 720px) {
+    .bd-placeholder-img {
+        object-fit: contain; /* Ajusta la imagen para cubrir completamente el contenedor */
+        width: 100%;
+        height: 100vh;
+    }
+    .botonProducts {
+        background: rgba(0, 0, 0, 1);
+        border-radius: 50%;
+    }
+
+    .flecha {
+        color: #000000;
+    }
+    .flecha:hover {
+        color:#ffffff;
+    }
+ }
+
+
+
+
+@media (max-width: 768px) {
+    .imagen {
+        width: calc(100% / 2); /* Cuando la pantalla es más pequeña, muestra 2 imágenes por fila */
+    }
+}
+
+@media (max-width: 480px) {
+    .imagen {
+        width: 100%; /* En dispositivos móviles, muestra 1 imagen por fila */
+    }
+}
+/* Media Query para tablet */
+@media (max-width: 1024px) {
+    .product-gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 productos por fila en la vista de tablet */
+    }
+}
+
+/* Media Query para móvil */
+@media (max-width: 600px) {
+    .product-gallery {
+        grid-template-columns: repeat(1, 1fr); /* 1 producto por fila en la vista móvil */
+    }
+}
+
+/* Estilo para el título H1 en pantallas pequeñas (menos de 560px de ancho) */
+@media (max-width: 560px) {
+    .content h1 {
+        font-size: 50px; /* Tamaño del texto en pantallas pequeñas */
+    }
+    .navbar-brand-img {
+        max-width: 70px;
+    }
+}
+
+/* Estilos para la versión móvil (ancho de página menor o igual a 1006px) */
+@media (max-width: 1006px) {
+    .product-section {
+        flex-direction: column; /* Cambia la dirección a "column" en pantallas más pequeñas */
+    }
+
+    .product-text {
+        text-align: center; /* Centra el texto en pantallas más pequeñas */
+    }
+
+    .product-image {
+        order: -1; /* Cambia el orden para que la imagen aparezca antes del texto en pantallas más pequeñas */
+    }
+    .product-image img {
+        max-width: 80%; /* Reduce el tamaño de la imagen en pantallas más pequeñas */
+        display: block; /* Evita que el espacio adicional aparezca debajo de la imagen en móvil */
+        margin: 0 auto; /* Centra horizontalmente la imagen en móvil */
+    }
+
+}
+
+@media (max-width: 330px) {
+    .content {
+        padding-top: 50px;
+    }
+}
+
+/* Media query para 1000px o menos */
+@media (max-width: 1000px) {
+    .superpuesto.scrolled {
+      /* Restablece el estilo .scrolled a su estado inicial cuando la pantalla se achica a 1000px o menos */
+      background: transparent;
+    }
+   
+    .navbar-dark .navbar-toggler {
+        position: relative;
+        top: -15px;
+        
+    }
+   
+  }
+
+
+
+/* Estilo para la tarjeta en vista móvil */
+@media (max-width: 768px) {
+    .card-container {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column-reverse; /* Cambiar a una disposición de columna */
+      
+    }
+
+    .card-details {
+      margin-top: 20px;
+      display: flex; /* Agregar un espacio entre la imagen principal y las miniaturas */
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .thumbnail-images {
+      display: flex;
+      flex-direction: row; /* Colocar miniaturas en una fila */
+      justify-content: center; /* Centrar las miniaturas */
+      
+    }
+
+    .thumbnail-images img {
+        padding: 5px;
+    }
+    .card-image img {
+        max-height: 300px; /* Establece una altura máxima para la imagen principal */
+        
+    }
+    .content {
+        width: 100%; /* Ocupa el ancho completo de la tarjeta */
+        
+    }
+    
+    .titulo1 {
+        font-size: 20px; /* Ajusta el tamaño del título en dispositivos móviles */
+    }
+    .parrafo1 {
+        font-size: 14px; /* Ajusta el tamaño del párrafo en dispositivos móviles */
+        margin-top: 5px; /* Reduce el margen superior del párrafo */
+        
+    }
+    .button1 {
+        font-size: 16px; /* Ajusta el tamaño del botón en dispositivos móviles */
+        margin-top: 15px; /* Aumenta el margen superior del botón */
+    }
+}
+
+
+@media (max-width: 900px) {
+    .parrafo1{
+        display: none;
+        
+    }
+}
+
+/* Media query para vista móvil (ancho máximo de 480px) */
+@media (max-width: 480px) {
+    .imagen {
+        width: 50%; /* Cambia el ancho de cada imagen en vista móvil */
+    }
+
+
+}
+
+@media (orientation:landscape) {
+    .card-container {
+        height: 100%;
+
+        
+    }
+
+    .card-image img {
+        width: 100vw;
+    }
+
+    .card-details {
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+       
+        
+    }
+    .thumbnail-images {
+        display: flex;
+        flex-direction: column;
+        width: 30vw; /* Tamaño fijo para las miniaturas */
+        height: 30vh; /* Ajusta la altura igual al ancho para mantener la relación de aspecto */
+        
+    }
+    
+}
+
+@media (max-height: 300px) {
+    .btn-accion {
+        display: none;
+    }
+}
+
+@media (max-width: 219px) {
+    .btn-accion{
+       display: none;
+    } 
+}
+    
+
+@media (max-width: 291px) and (max-height: 300px) {
+    .word-split {
+        height: 90px;
+    }
+}
+
+@media (max-width: 991px) {
+    .nav-link-bottom {
+        display: none;
+    }
+}
